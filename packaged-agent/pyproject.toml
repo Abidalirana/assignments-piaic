@@ -1,0 +1,23 @@
+[project]
+name = "packaged-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "abid ali", email = "abidali431992@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+packaged-agent = "packaged_agent:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = [
+    "hello_agent",
+    "src/hello_agent",
+]
